@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
+import { LanguageDashboardModule } from './language-dashboard/language-dashboard.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
@@ -23,6 +25,7 @@ import { FooterComponent } from './navigation/footer/footer.component';
     BrowserModule,
     CommonModule,
     FormsModule,
+    LanguageDashboardModule,
     // Routing
    AppRoutingModule
   ],
