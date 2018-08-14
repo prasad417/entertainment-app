@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 import { LanguageDashboardModule } from './language-dashboard/language-dashboard.module';
+import { ArtistDashboardModule } from './artist-dashboard/artist-dashboard.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './navigation/header/header.component';
@@ -26,6 +27,7 @@ import { FooterComponent } from './navigation/footer/footer.component';
     CommonModule,
     FormsModule,
     LanguageDashboardModule,
+    ArtistDashboardModule,
     // Routing
    AppRoutingModule
   ],
