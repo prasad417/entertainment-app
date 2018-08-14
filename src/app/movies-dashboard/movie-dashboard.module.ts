@@ -14,7 +14,7 @@ import { MovieDashboardService } from './movie-dashboard.service';
 
 const routes: Routes = [
     {
-        path: 'artistmovies',
+        path: 'artistmovies/:id',
         component: MovieDashboardComponent
     }
 ];

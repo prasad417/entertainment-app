@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Movie } from './../../models/movie.interface';
 
@@ -12,14 +13,17 @@ import { error } from '@angular/compiler/src/util';
 })
 export class MovieDashboardComponent implements OnInit {
   movies: Movie[];
+  id: number;
 
   public errorMsg;
 
-  constructor(private movieService: MovieDashboardService) { }
+  constructor(private _Activatedroute: ActivatedRoute, private _router: Router, private movieService: MovieDashboardService) { }
+
 
   ngOnInit() {
+    this.id = this._Activatedroute.snapshot.params['id'];
     this.movieService
-      .getMovies()
+      .getMovies(this.id)
       .subscribe((data: Movie[]) => this.movies = data );
       // (error: any) => this.errorMsg = error);
   }

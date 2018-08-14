@@ -7,15 +7,15 @@ import { map, catchError } from 'rxjs/operators';
 
 import { Movie } from './models/movie.interface';
 
-const Artists_API: string = environment.apiUrl;
+const Movies_API: string = environment.apiUrl;
 
 @Injectable()
 export class MovieDashboardService {
     constructor(private http: HttpClient) {}
 
-    getMovies(): Observable<Movie[]> {
+    getMovies(id: number): Observable<Movie[]> {
         return this.http
-            .get<Movie[]>(`${Artists_API}/movies`)
+            .get<Movie[]>(`${Movies_API}/artists/${id}/movies`)
             .pipe(
                 map((response: Response) => response),
                 catchError(this.errorHandler)
