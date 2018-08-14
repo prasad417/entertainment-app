@@ -1,9 +1,4 @@
-<div class="language" *ngFor="let language of languages;">
-  <div class="card">
-      <a routerLink="/artists"><h3>{{ language.name }}</h3></a>
-  </div>
-</div>
-<app-language-detail>
+<app-language-detail
   *ngFor="let language of languages;"
-  [detail]="language"
+  [detail]="language">
 </app-language-detail>
