@@ -7,6 +7,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 import { LanguageDashboardModule } from './language-dashboard/language-dashboard.module';
 import { ArtistDashboardModule } from './artist-dashboard/artist-dashboard.module';
+import { MovieDashboardModule } from './movies-dashboard/movie-dashboard.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './navigation/header/header.component';
@@ -28,6 +29,7 @@ import { FooterComponent } from './navigation/footer/footer.component';
     FormsModule,
     LanguageDashboardModule,
     ArtistDashboardModule,
+    MovieDashboardModule,
     // Routing
    AppRoutingModule
   ],
