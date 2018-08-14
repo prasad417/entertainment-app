@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Artist } from './../../models/artist.interface';
 
@@ -12,14 +13,16 @@ import { error } from '@angular/compiler/src/util';
 })
 export class ArtistDashboardComponent implements OnInit {
   artists: Artist[];
+  id: number;
 
   public errorMsg;
 
-  constructor(private artistService: ArtistDashboardService) { }
+  constructor(private _Activatedroute: ActivatedRoute, private _router: Router, private artistService: ArtistDashboardService) { }
 
   ngOnInit() {
+    this.id = this._Activatedroute.snapshot.params['id'];
     this.artistService
-      .getArtists()
+      .getArtists(this.id)
       .subscribe((data: Artist[]) => this.artists = data );
       // (error: any) => this.errorMsg = error);
   }

@@ -13,9 +13,9 @@ const Artists_API: string = environment.apiUrl;
 export class ArtistDashboardService {
     constructor(private http: HttpClient) {}
 
-    getArtists(): Observable<Artist[]> {
+    getArtists(id: number): Observable<Artist[]> {
         return this.http
-            .get<Artist[]>(`${Artists_API}/artists`)
+            .get<Artist[]>(`${Artists_API}/languages/${id}/artists`)
             .pipe(
                 map((response: Response) => response),
                 catchError(this.errorHandler)

@@ -14,8 +14,9 @@ import { ArtistDashboardService } from './artist-dashboard.service';
 
 const routes: Routes = [
     {
-        path: 'artists',
-        component: ArtistDashboardComponent
+        path: 'artists/:id',
+        component: ArtistDashboardComponent,
+        pathMatch: 'full'
     }
 ];
 
