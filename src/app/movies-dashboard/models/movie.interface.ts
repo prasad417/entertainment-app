@@ -1,8 +1,8 @@
 export interface Movie {
-    language_name: string;
-    movie_name: string;
-    artist_name: string;
-    actress_name: string;
+    languageName: string;
+    movieName: string;
+    artistName: string;
+    actressName: string;
     genre: string;
     director: string;
     releasedate: string;

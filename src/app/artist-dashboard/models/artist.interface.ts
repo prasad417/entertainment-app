@@ -1,6 +1,6 @@
 export interface Artist {
     id: number;
-    language_name: string;
-    artist_name: string;
+    languageName: string;
+    artistName: string;
     logoURL: string;
 }
