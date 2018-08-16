@@ -11,7 +11,7 @@ export interface Movie {
     musicdirector: string;
     singers: Array<string>;
     tracks: Array<string>;
-    movie_url: string;
+    movieURL: string;
     image: string;
     id: number;
 }

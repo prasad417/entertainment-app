@@ -12,16 +12,16 @@ import { MovieDashboardModule } from './movies-dashboard/movie-dashboard.module'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
+import { BackGroundComponent } from './background/background.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgHttpLoaderModule } from 'ng-http-loader';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    BackGroundComponent,
     routingComponents
   ],
   imports: [
