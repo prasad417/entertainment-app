@@ -2,7 +2,7 @@
     <div class="card-body">
         <h3 class="card-title" >
             <a [routerLink]="['/artistmovies', detail.id]" class="text-capitalize">
-                <img class="card-img-top" src="http://prasaddy.x10host.com{{ detail.logoURL }}" alt="{{ detail.artistName }}" >{{ detail.artistName }}
+                <img class="card-img-top" src="{{ detail.logoURL }}" alt="{{ detail.artistName }}" >{{ detail.artistName }}
             </a>
         </h3>
     </div>
