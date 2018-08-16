@@ -23,7 +23,9 @@ export class ArtistDashboardComponent implements OnInit {
     this.id = this._Activatedroute.snapshot.params['id'];
     this.artistService
       .getArtists(this.id)
-      .subscribe((data: Artist[]) => this.artists = data );
+      .subscribe((data: Artist[]) => this.artists = data.sort(
+        (a: Artist, b: Artist) => (a.artistName < b.artistName ? -1 : 1)
+      ));
       // (error: any) => this.errorMsg = error);
   }
 

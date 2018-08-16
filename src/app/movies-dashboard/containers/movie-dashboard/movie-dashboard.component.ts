@@ -24,7 +24,9 @@ export class MovieDashboardComponent implements OnInit {
     this.id = this._Activatedroute.snapshot.params['id'];
     this.movieService
       .getMovies(this.id)
-      .subscribe((data: Movie[]) => this.movies = data );
+      .subscribe((data: Movie[]) => this.movies = data.sort(
+        (a: Movie, b: Movie) => (a.movieName < b.movieName ? -1 : 1)
+      ));
       // (error: any) => this.errorMsg = error);
   }
 

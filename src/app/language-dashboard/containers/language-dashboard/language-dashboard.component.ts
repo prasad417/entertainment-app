@@ -20,7 +20,9 @@ export class LanguageDashboardComponent implements OnInit {
   ngOnInit() {
     this.languageService
       .getLanguages()
-      .subscribe((data: Language[]) => this.languages = data );
+      .subscribe((data: Language[]) => this.languages = data.sort(
+        (a: Language, b: Language) => (a.name < b.name ? -1 : 1)
+      ));
       // (error: any) => this.errorMsg = error);
   }
 
