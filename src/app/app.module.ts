@@ -12,6 +12,8 @@ import { MovieDashboardModule } from './movies-dashboard/movie-dashboard.module'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 
 
@@ -27,6 +29,8 @@ import { FooterComponent } from './navigation/footer/footer.component';
     BrowserModule,
     CommonModule,
     FormsModule,
+    HttpClientModule,
+    NgHttpLoaderModule,
     LanguageDashboardModule,
     ArtistDashboardModule,
     MovieDashboardModule,

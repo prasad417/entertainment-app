@@ -28,6 +28,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "ng-http-loader": "^3.0.0",
     "path": "^0.12.7",
     "popper.js": "^1.14.3",
     "rxjs": "^6.0.0",
