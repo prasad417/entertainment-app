@@ -6,6 +6,7 @@ const app =express();
 
 app.use(express.static('./dist/entertainment-app'));
 
+
 app.get('/*', (req,res)=>{
     
 res.sendFile(path.join(__dirname,'/dist/entertainment-app/index.html'));
